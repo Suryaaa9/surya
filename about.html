@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            background-color: darkslategrey;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, p {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeSlideUp 0.8s ease forwards;
+        }
+
+        h1 {
+            font-family: monospace;
+            color: beige;
+            font-size: 500%;
+            animation-delay: 0.2s;
+        }
+
+        h2 {
+            animation-delay: 0.4s;
+            font-family: monospace;
+            color: floralwhite;
+            font-size: 250%;
+        }
+
+        p {
+            animation-delay: 0.6s;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: lavenderblush;
+            font-size: 160%;
+            line-height: 1.5;
+        }
+
+        @keyframes fadeSlideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: skyblue;
+        }
+
+        footer {
+            font-family: 'Times New Roman', Times, serif;
+            color: cornsilk;
+        }
+
+        .a1 {
+            margin-left: 100px;
+            color: whitesmoke;
+            text-decoration: none;
+            font-size: 150%;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .a1:hover {
+            color: #2e7853;
+        }
+
+        .a1::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #a9dfbf;
+            transition: width 0.3s ease;
+        }
+
+        .a1:hover::after {
+            width: 100%;
+        }
+
+        #im1 {
+            display: block;
+            float: right;
+            height: 400px;
+            width: 400px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        #im2 {
+            display: block;
+            float: left;
+            height: 80px;
+            margin: 50px;
+        }
+
+        @media (max-width: 768px) {
+            header nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                float: none !important;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+                font-size: 1.2em;
+                margin-left: 0;
+            }
+
+            #im1 {
+                float: none;
+                width: 90%;
+                height: auto;
+                margin: 20px auto;
+            }
+
+            h1 {
+                font-size: 2em;
+                text-align: center;
+                padding: 0 10px;
+            }
+
+            h2, p {
+                text-align: center;
+                padding: 0 15px;
+            }
+
+            .a1 {
+                margin: 10px 0;
+            }
+
+            div[style*="margin: 30px"] {
+                margin: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav style="float: right;">
+            <a href="index.html" class="a1">Home</a>
+            <a href="about.html" class="a1">About</a>
+            <a href="contact.html" class="a1">Contact</a>
+            <a href="Projects.html" class="a1">Projects</a>
+        </nav>
+    </header>
+
+    <br><br><br><br>
+    <div style="margin: 30px;">
+        <h1><img src="njn.png" id="im1">About Me</h1>
+        <h2>Hello! I'm Suryanarayanan Unni</h2>
+        <p>
+            I'm currently a second-semester Computer Science Engineering student at Amrita University, Amritapuri campus.<br><br>
+            My interest in programming and technology drives me to learn new skills every day. This portfolio is a reflection of my academic journey, projects, and personal growth in the world of computing.<br><br>
+            I enjoy solving problems, building creative applications, and continuously improving my knowledge in areas like data structures, algorithms, and web development.
+        </p>
+    </div>
+</body>
+</html>

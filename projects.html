@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            background-color: darkslategrey;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3, h4, dl {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeSlideUp 0.8s ease forwards;
+        }
+
+        h1 {
+            font-family: monospace;
+            color: beige;
+            font-size: 400%;
+            animation-delay: 0.2s;
+            text-align: left;
+            margin-left: 50px;
+        }
+
+        h2 {
+            animation-delay: 0.3s;
+            font-family: monospace;
+            color: floralwhite;
+            font-size: 300%;
+            float: right;
+            margin-right: 50px;
+        }
+
+        h3, h4, ul {
+            animation-delay: 0.4s;
+            font-family: monospace;
+            color: lavenderblush;
+            font-size: 150%;
+            margin-left: 100px;
+        }
+
+        nav a {
+            margin-left: 100px;
+            color: whitesmoke;
+            text-decoration: none;
+            font-size: 150%;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            animation: fadeSlideUp 0.4s ease;
+            color: #2e7853;
+        }
+
+        #im1 {
+            float: right;
+            height: 700px;
+            width: auto;
+            margin: 30px;
+        }
+
+        dd {
+            font-size: 30px;
+            font-style: oblique;
+            color: lemonchiffon;
+        }
+
+        dt {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 50px;
+            color: cornsilk;
+        }
+
+        h2 {
+            font-size: 50px;
+        }
+
+        .a1 {
+            color: whitesmoke;
+            text-decoration: none;
+            font-size: 150%;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .a1:hover {
+            color: #2e7853;
+        }
+
+        .a1::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #a9dfbf;
+            transition: width 0.3s ease;
+        }
+
+        .a1:hover::after {
+            width: 100%;
+        }
+
+        @keyframes fadeSlideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header {
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                float: none !important;
+                padding: 10px 0;
+            }
+
+            nav a {
+                margin: 10px 0;
+                font-size: 1.2em;
+                margin-left: 0;
+            }
+
+            h1, h2 {
+                text-align: center;
+                float: none;
+                margin: 20px auto;
+                font-size: 2em;
+            }
+
+            #im1 {
+                float: none;
+                display: block;
+                height: auto;
+                width: 90%;
+                margin: 20px auto;
+            }
+
+            dl {
+                margin: 20px;
+                text-align: center;
+            }
+
+            dt {
+                font-size: 1.8em;
+            }
+
+            dd {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav style="float: right;">
+            <a href="index.html" class="a1">Home</a>
+            <a href="about.html" class="a1">About</a>
+            <a href="contact.html" class="a1">Contact</a>
+            <a href="projects.html" class="a1">Projects</a>
+        </nav>
+    </header>
+    <div>
+        <h1><img src="ssssssss.png" id="im1">Projects</h1>
+        <dl>
+            <dt>Resume</dt>
+            <dd>The following is a resume I created for HTML labsheet 1.</dd>
+            <dd><a href="reusme.html" class="a1">CLICK HERE</a></dd>
+            <dd>Only internal method is being used.</dd>
+        </dl>
+        <dl>
+            <dt>Nested Table</dt>
+            <dd>The following is a nested table I created for class works.</dd>
+            <dd><a href="toma.html" class="a1">CLICK HERE</a></dd>
+            <dd>Only internal method is being used.</dd>
+        </dl>
+        <dl>
+            <dt>Time Table</dt>
+            <dd>The following is a Time table I created for class works.</dd>
+            <dd><a href="timetable.html" class="a1">CLICK HERE</a></dd>
+            <dd>Only internal method is being used.</dd>
+        </dl>
+    </div>
+</body>
+</html>

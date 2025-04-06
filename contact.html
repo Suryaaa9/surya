@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            background-color: darkslategrey;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, label, input, textarea, button, ul {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeSlideUp 0.8s ease forwards;
+        }
+
+        h1 {
+            font-family: monospace;
+            color: beige;
+            font-size: 400%;
+            animation-delay: 0.2s;
+            text-align: center;
+        }
+
+        ul {
+            animation-delay: 0.3s;
+            font-size: 250%;
+            float: right;
+            margin-right: 50px;
+            color: cornsilk;
+            text-decoration: wavy;
+            margin-right: 530px;
+        }
+
+        a {
+            animation-delay: 0.3s;
+            color: rgb(166, 162, 173);
+            text-decoration: wavy;
+        }
+
+        h2 {
+            animation-delay: 0.4s;
+            font-family: monospace;
+            color: floralwhite;
+            font-size: 300%;
+            float: right;
+            margin-right: 50px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            font-size: 1.2em;
+            animation-delay: 0.4s;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: none;
+            font-size: 1em;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #2e7853;
+            color: white;
+            border: none;
+            font-size: 1.1em;
+            border-radius: 5px;
+            cursor: pointer;
+            animation-delay: 0.6s;
+        }
+
+        button:hover {
+            background-color: #245d40;
+        }
+
+        @keyframes fadeSlideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: skyblue;
+        }
+
+        footer {
+            font-family: 'Times New Roman', Times, serif;
+            color: cornsilk;
+        }
+
+        .a1 {
+            margin-left: 100px;
+            color: whitesmoke;
+            text-decoration: none;
+            font-size: 150%;
+            transition: all 0.3s ease;
+        }
+
+        .a1:hover {
+            color: #2e7853;
+        }
+
+        #im2 {
+            display: block;
+            float: left;
+            height: 80px;
+            margin: 50px;
+        }
+
+        a {
+            position: relative;
+            display: inline-block;
+            color: rgb(166, 162, 173);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -3px;
+            left: 0;
+            background-color: #a9dfbf;
+            transition: width 0.3s ease;
+        }
+
+        a:hover {
+            color: #a9dfbf;
+            transform: scale(1.05);
+        }
+
+        a:hover::after {
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            header nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                float: none !important;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+                font-size: 1.2em;
+                margin-left: 0;
+            }
+
+            h1 {
+                font-size: 2em;
+                padding: 0 10px;
+            }
+
+            h2 {
+                font-size: 1.3em;
+                float: none;
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            form {
+                padding: 10px;
+                width: 90%;
+            }
+
+            .a1 {
+                margin: 10px 0;
+            }
+
+            div[style*="border-right"] {
+                width: 100% !important;
+                height: auto;
+                border-right: none !important;
+                padding-right: 0;
+                float: none !important;
+            }
+
+            ul {
+                float: none;
+                margin: 20px auto;
+                text-align: center;
+                font-size: 1.3em;
+                padding: 0;
+                list-style: none;
+            }
+
+            ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav style="float: right;">
+            <a href="index.html" class="a1">Home</a>
+            <a href="about.html" class="a1">About</a>
+            <a href="contact.html" class="a1">Contact</a>
+            <a href="projects.html" class="a1">Projects</a>
+        </nav>
+    </header>
+    <br><br><br><br>
+
+    <div style="float:left;border-right:solid black 5px;padding-right: 50px; width: 600px;height: 600px ;">
+        <h1>Contact Me</h1>
+        <form action="mailto:febyroman23@gmail.com" method="POST" enctype="text/plain">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <br><br>
+
+    <h2><b>Address:</b> Gurunilayam, vavvakavu po,<br>changankulangara, kollam,<br>kerala</h2>
+    <h2 style="margin-right: 275px;">Phone Number: 9496963987</h2>
+
+    <ul>
+        <li><a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=5zg3sf8" target="_parent">Instagram</a></li>
+        <li><a href="https://codeforces.com/profile/login" target="_parent">CodeForce</a></li>
+        <li><a href="https://x.com/0_0Surya0_0?t=n5I-caCtJeVF4Hm-9FGlbw&s=08" target="_parent">Twitter</a></li>
+    </ul>
+</body>
+</html>
