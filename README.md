@@ -8,6 +8,7 @@ Welcome to the official repository for my personal portfolio website — suryaaa
 
 📌 Live Demo
 🔗 Visit Now: https://suryaaa9.github.io/surya
+    Github link: https://github.com/Suryaaa9/surya
 
 
 
